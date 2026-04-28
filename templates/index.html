@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Paddy Disease Detector</title>
+    <!-- Modern Typography: Outfit & Inter from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <!-- Ionicons for modern icons -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="background-decor"></div>
+    
+    <header class="glass-header">
+        <div class="logo">
+            <ion-icon name="leaf-outline"></ion-icon>
+            <h1 data-i18n="appTitle">Smart Paddy Detector</h1>
+        </div>
+        <div class="controls">
+            <select id="languageSelect" class="lang-selector">
+                <option value="en">English</option>
+                <option value="te">తెలుగు (Telugu)</option>
+                <option value="hi">हिंदी (Hindi)</option>
+                <option value="ta">தமிழ் (Tamil)</option>
+            </select>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="upload-section glass-card fade-in">
+            <div class="text-center">
+                <h2 data-i18n="uploadInstruction">Upload Paddy Leaf Image</h2>
+                <p data-i18n="uploadSubtext" class="subtext">Take a clear picture of the infected leaf for accurate diagnosis.</p>
+            </div>
+            
+            <div class="upload-area" id="dropZone" style="position: relative;">
+                <!-- Native input spanning the entire drop area natively to circumvent all browser locks -->
+                <input type="file" id="imageInput" accept="image/*" style="opacity: 0; position: absolute; top: 0; left: 0; width: 100%; height: 100%; cursor: pointer; z-index: 10;">
+                
+                <div class="upload-placeholder" id="uploadPlaceholder">
+                    <ion-icon name="cloud-upload-outline" class="upload-icon"></ion-icon>
+                    <p data-i18n="dragDrop">Tap here to choose or capture image</p>
+                </div>
+                <img id="imagePreview" class="hidden" alt="Leaf Preview" style="position: absolute; width: 100%; height: 100%; object-fit: contain; z-index: 5;">
+            </div>
+
+            <div class="action-buttons">
+                <!-- Button is always enabled so users get clear feedback if they press it prematurely -->
+                <button id="analyzeBtn" class="btn btn-primary">
+                    <ion-icon name="scan-outline"></ion-icon>
+                    <span data-i18n="analyzeBtn">Analyze Image</span>
+                </button>
+            </div>
+            
+            <div id="loadingIndicator" class="loading-wrapper hidden">
+                <div class="spinner"></div>
+                <p data-i18n="analyzing">AI is analyzing the leaf...</p>
+            </div>
+        </section>
+
+        <!-- Results Section -->
+        <section id="resultsSection" class="results-section glass-card hidden slide-up">
+            <div class="results-header">
+                <div>
+                    <h2 data-i18n="resultTitle">Diagnosis Result</h2>
+                    <div class="disease-title" id="diseaseName">Brown Spot</div>
+                </div>
+                <!-- Voice Assistant Button -->
+                <button id="voiceBtn" class="btn-icon" aria-label="Read Results" title="Read Results aloud">
+                    <ion-icon name="volume-high-outline"></ion-icon>
+                </button>
+            </div>
+
+            <div class="metrics-row">
+                <div class="metric-box">
+                    <ion-icon name="analytics-outline" class="metric-icon"></ion-icon>
+                    <div>
+                        <span class="metric-label" data-i18n="confidence">Confidence</span>
+                        <div class="metric-val" id="confidenceVal">92%</div>
+                    </div>
+                </div>
+                <div class="metric-box">
+                    <ion-icon name="alert-circle-outline" class="metric-icon"></ion-icon>
+                    <div>
+                        <span class="metric-label" data-i18n="severity">Severity</span>
+                        <div class="metric-val severity-high" id="severityVal">High</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Actionable Guidance -->
+            <div class="guidance-grid">
+                <div class="guide-card cause">
+                    <div class="guide-header">
+                        <ion-icon name="bug-outline"></ion-icon>
+                        <h3 data-i18n="guideCause">Cause</h3>
+                    </div>
+                    <p id="guideCauseText">...</p>
+                </div>
+
+                <div class="guide-card precautions">
+                    <div class="guide-header">
+                        <ion-icon name="shield-checkmark-outline"></ion-icon>
+                        <h3 data-i18n="guidePrecautions">Precautions</h3>
+                    </div>
+                    <p id="guidePrecautionsText">...</p>
+                </div>
+
+                <div class="guide-card fertilizers">
+                    <div class="guide-header">
+                        <ion-icon name="flask-outline"></ion-icon>
+                        <h3 data-i18n="guideFertilizers">Fertilizers</h3>
+                    </div>
+                    <p id="guideFertilizersText">...</p>
+                </div>
+
+                <div class="guide-card organic">
+                    <div class="guide-header">
+                        <ion-icon name="leaf"></ion-icon>
+                        <h3 data-i18n="guideOrganic">Organic Treatment</h3>
+                    </div>
+                    <p id="guideOrganicText">...</p>
+                </div>
+                
+                <div class="guide-card pesticides">
+                    <div class="guide-header">
+                        <ion-icon name="water-outline"></ion-icon>
+                        <h3 data-i18n="guidePesticides">Pesticides</h3>
+                    </div>
+                    <p id="guidePesticidesText">...</p>
+                </div>
+            </div>
+            
+            <button id="resetBtn" class="btn btn-secondary mt-20">
+                <ion-icon name="refresh-outline"></ion-icon>
+                <span data-i18n="resetBtn">Analyze Another Image</span>
+            </button>
+        </section>
+    </main>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>

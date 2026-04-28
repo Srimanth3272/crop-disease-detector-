@@ -1,0 +1,92 @@
+{
+  "Leaf Blast": {
+    "en": {
+      "disease_display": "Leaf Blast",
+      "cause": "Magnaporthe oryzae fungus.",
+      "precautions": "Avoid excessive nitrogen fertilizer application, maintain proper planting density, and destroy infected crop residues.",
+      "fertilizers": "Apply Silica-based fertilizers. Maintain balanced Nitrogen, Phosphorus, and Potassium (NPK).",
+      "pesticides": "Tricyclazole 75% WP (120-150g/acre) or Isoprothiolane 40% EC (300ml/acre).",
+      "organic": "Spray Pseudomonas fluorescens at 5g/liter of water."
+    },
+    "te": {
+      "disease_display": "ఆకు మచ్చ వ్యాధి (Leaf Blast)",
+      "cause": "మాగ్నాపోర్తే ఒరైజే అనే ఫంగస్ (శిలీంధ్రం) వల్ల వస్తుంది.",
+      "precautions": "అధిక నత్రజని ఎరువుల వాడకాన్ని నివారించండి. సరైన వ్యవధిలో మొక్కలు నాటండి, వ్యాధి సోకిన అవశేషాలను నాశనం చేయండి.",
+      "fertilizers": "సిలికా ఆధారిత ఎరువులను వాడండి. నత్రజని, భాస్వరం మరియు పొటాషియం (NPK) సరైన మోతాదులో ఉంచండి.",
+      "pesticides": "ట్రైసైక్లాజోల్ 75% WP (120-150గ్రా/ఎకరానికి) లేదా ఐసోప్రోథియోలేన్ 40% EC పీచికారి చేయండి.",
+      "organic": "లీటరు నీటికి 5గ్రా సూడోమొనాస్ ఫ్లోరోసెన్స్ కలిపి పిచికారీ చేయండి."
+    }
+  },
+  "Brown Spot": {
+    "en": {
+      "disease_display": "Brown Spot",
+      "cause": "Bipolaris oryzae fungus, often associated with nutrient-deficient soils.",
+      "precautions": "Improve soil fertility, provide regular water supply, and use certified disease-free seeds.",
+      "fertilizers": "Address soil deficiencies. Apply soil amendments and ensure adequate Nitrogen and Potassium.",
+      "pesticides": "Mancozeb 75% WP (400-500g/acre) or Propiconazole 25% EC.",
+      "organic": "Neem oil spray (3-5 ml/liter) can help prevent the spread."
+    },
+    "te": {
+      "disease_display": "బ్రౌన్ స్పాట్ / ఆకు మచ్చ",
+      "cause": "బైపోలారిస్ ఒరైజే అనే శిలీంధ్రం. సాధారణంగా పోషకాల లోపం ఉన్న నేలల్లో వస్తుంది.",
+      "precautions": "నేల సారాన్ని మెరుగుపరచండి, క్రమం తప్పకుండా నీరు అందించండి, నాణ్యమైన విత్తనాలను మాత్రమే వాడండి.",
+      "fertilizers": "నేల లోపాలను సరిదిద్దండి. నత్రజని మరియు పొటాషియం తగినంత ఉండేలా చూసుకోండి.",
+      "pesticides": "మాంకోజెబ్ 75% WP (400-500గ్రా/ఎకరానికి) లేదా ప్రొపికొనజోల్ 25% EC వాడండి.",
+      "organic": "వ్యాధి వ్యాప్తిని నివారించడానికి వేప నూనె (లీటరుకి 3-5 మి.లీ) పిచికారీ చేయండి."
+    }
+  },
+  "Bacterial Leaf Blight": {
+    "en": {
+      "disease_display": "Bacterial Leaf Blight",
+      "cause": "Xanthomonas oryzae pv. oryzae bacteria.",
+      "precautions": "Use resistant varieties, avoid clipping seedling leaves, ensure proper field drainage.",
+      "fertilizers": "Avoid excessive Nitrogen (N). Increase Potassium (K) to enhance disease resistance.",
+      "pesticides": "Streptocycline (1.5g) mixed with Copper Oxychloride (500g) in 200 liters of water/acre.",
+      "organic": "Cow dung extract spray (20%) can be effective in reducing incidence."
+    },
+    "te": {
+      "disease_display": "ఆకు ఎండు తెగులు (Bacterial Blight)",
+      "cause": "జాంతోమోనాస్ ఒరైజే అనే వ్యాధికారక బ్యాక్టీరియా వల్ల వస్తుంది.",
+      "precautions": "వ్యాధి నిరోధక రకాలను వాడండి, పొలంలో నీరు నిల్వ ఉండకుండా సరైన మురుగునీటి పారుదల ఉండేలా చూడండి.",
+      "fertilizers": "అధిక నత్రజని వాడటం మానుకోండి. రోగనిరోధక శక్తిని పెంచడానికి పొటాషియం (K) పెంచండి.",
+      "pesticides": "స్ట్రెప్టోసైక్లిన్ (1.5గ్రా) మరియు కాపర్ ఆక్సీక్లోరైడ్ (500గ్రా) ను 200 లీటర్ల నీటిలో కలిపి ఎకరానికి పిచికారీ చేయండి.",
+      "organic": "పచ్చి పేడ ద్రావణం (20%) పిచికారీ చేయడం వల్ల వ్యాధి తీవ్రత తగ్గుతుంది."
+    }
+  },
+  "Tungro Virus": {
+    "en": {
+      "disease_display": "Tungro Virus",
+      "cause": "Rice Tungro Bacilliform Virus (RTBV) and Rice Tungro Spherical Virus (RTSV), transmitted by leafhoppers.",
+      "precautions": "Control the green leafhopper vector, remove and destroy infected plants immediately.",
+      "fertilizers": "Adequate basal application of fertilizers. No specific curative fertilizer.",
+      "pesticides": "Insecticides to control leafhoppers: Imidacloprid 17.8 SL (40ml/acre) or Thiamethoxam 25 WG (40g/acre).",
+      "organic": "Neem Seed Kernel Extract (NSKE) 5% as a preventive measure against leafhoppers."
+    },
+    "te": {
+      "disease_display": "తుంగ్రో వైరస్ (Tungro Virus)",
+      "cause": "దీపపు పురుగులు, పచ్చ దోమల ద్వారా వ్యాప్తి చెందే రైస్ తుంగ్రో వైరస్.",
+      "precautions": "పచ్చ దోమలను నివారించండి, వ్యాధి సోకిన మొక్కలను వెంటనే పీకి నాశనం చేయండి.",
+      "fertilizers": "ప్రాథమిక ఎరువులను తగినంత వేయాలి. దీనికి ప్రత్యేక ఎరువులు లేవు.",
+      "pesticides": "పచ్చ దోమలను నివారించడానికి ఇమిడాక్లోప్రిడ్ 17.8 SL (40మి.లీ/ఎకరం) వాడండి.",
+      "organic": "ముందుజాగ్రత్తగా 5% వేప గింజ కషాయం (NSKE) పిచికారీ చేయండి."
+    }
+  },
+  "Healthy Leaf": {
+    "en": {
+      "disease_display": "Healthy Leaf",
+      "cause": "Optimal conditions.",
+      "precautions": "Continue regular monitoring and crop maintenance.",
+      "fertilizers": "Maintain your regular schedule of balanced NPK.",
+      "pesticides": "None required.",
+      "organic": "Use regular organic compost to maintain soil health."
+    },
+    "te": {
+      "disease_display": "ఆరోగ్యకరమైన ఆకు",
+      "cause": "మంచి వాతావరణం, సరైన పోషణ.",
+      "precautions": "పంటను క్రమం తప్పకుండా పర్యవేక్షించడం కొనసాగించండి.",
+      "fertilizers": "మీ సాధారణ NPK ఎరువుల షెడ్యూల్ కొనసాగించండి.",
+      "pesticides": "ఏమీ అవసరం లేదు.",
+      "organic": "నేల ఆరోగ్యాన్ని కాపాడుకోవడానికి సాధారణ సేంద్రియ ఎరువులు వాడండి."
+    }
+  }
+}
