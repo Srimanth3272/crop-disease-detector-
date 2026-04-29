@@ -5,3 +5,4 @@ numpy
 pymongo
 python-dotenv
 gunicorn
+google-generativeai
