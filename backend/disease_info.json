@@ -88,5 +88,185 @@
       "pesticides": "ఏమీ అవసరం లేదు.",
       "organic": "నేల ఆరోగ్యాన్ని కాపాడుకోవడానికి సాధారణ సేంద్రియ ఎరువులు వాడండి."
     }
+  },
+  "Sheath Blight": {
+    "en": {
+      "disease_display": "Sheath Blight",
+      "cause": "Rhizoctonia solani fungus.",
+      "precautions": "Avoid dense planting, ensure proper field drainage, and remove weeds.",
+      "fertilizers": "Avoid excessive Nitrogen. Apply Potash in split doses.",
+      "pesticides": "Propiconazole 25% EC (200ml/acre) or Hexaconazole 5% EC (400ml/acre).",
+      "organic": "Spray Pseudomonas fluorescens at 5-10g/liter of water."
+    },
+    "te": {
+      "disease_display": "ఆకు తొడుగు కుళ్ళు (Sheath Blight)",
+      "cause": "రైజోక్టోనియా సోలాని అనే శిలీంధ్రం (ఫంగస్) వల్ల వస్తుంది.",
+      "precautions": "మొక్కలను మరీ దగ్గరగా నాటకండి, పొలంలో నీరు నిల్వ ఉండకుండా మురుగునీటి సౌకర్యం కల్పించండి, కలుపు మొక్కలను తొలగించండి.",
+      "fertilizers": "అధిక నత్రజని వాడకం తగ్గించండి. పొటాష్ ఎరువులను దఫాలుగా వేయండి.",
+      "pesticides": "ప్రొపికొనజోల్ 25% EC (200మి.లీ/ఎకరం) లేదా హెక్సాకొనజోల్ 5% EC (400మి.లీ/ఎకరం) పిచికారీ చేయండి.",
+      "organic": "లీటరు నీటికి 5-10గ్రా సూడోమొనాస్ ఫ్లోరోసెన్స్ కలిపి పిచికారీ చేయండి."
+    }
+  },
+  "Sheath Rot": {
+    "en": {
+      "disease_display": "Sheath Rot",
+      "cause": "Sarocladium oryzae fungus. Often occurs with stem borer damage.",
+      "precautions": "Use healthy seeds, control stem borer pests, and maintain proper plant spacing.",
+      "fertilizers": "Apply Gypsum to improve soil structure. Use balanced NPK.",
+      "pesticides": "Carbendazim 50% WP (1g/liter) or Propiconazole 25% EC (1ml/liter).",
+      "organic": "Neem oil spray (3-5 ml/liter) to control pest vectors."
+    },
+    "te": {
+      "disease_display": "షీత్ రాట్ (Sheath Rot)",
+      "cause": "సరోక్లాడియం ఒరైజే ఫంగస్. ఇది సాధారణంగా కాండం తొలుచు పురుగు ఆశించినప్పుడు వస్తుంది.",
+      "precautions": "ఆరోగ్యకరమైన విత్తనాలను వాడండి, కాండం తొలుచు పురుగును నివారించండి, మొక్కల మధ్య తగినంత దూరం పాటించండి.",
+      "fertilizers": "నేల నిర్మాణాన్ని మెరుగుపరచడానికి జిప్సం వాడండి. NPK ఎరువులను సమతుల్యంగా వాడండి.",
+      "pesticides": "కార్బెండజిమ్ 50% WP (1గ్రా/లీటరు) లేదా ప్రొపికొనజోల్ 25% EC (1మి.లీ/లీటరు) పిచికారీ చేయండి.",
+      "organic": "పురుగులను నివారించడానికి వేప నూనె (లీటరుకి 3-5 మి.లీ) పిచికారీ చేయండి."
+    }
+  },
+  "False Smut": {
+    "en": {
+      "disease_display": "False Smut",
+      "cause": "Ustilaginoidea virens fungus, promoted by high humidity and excessive nitrogen.",
+      "precautions": "Avoid late sowing and avoid applying excess nitrogen during the flowering stage.",
+      "fertilizers": "Reduce Nitrogen application during heading/flowering stage.",
+      "pesticides": "Copper Oxychloride 50 WP (2.5g/liter) or Propiconazole 25 EC (1ml/liter) at boot leaf stage.",
+      "organic": "Hot water seed treatment before sowing."
+    },
+    "te": {
+      "disease_display": "మసి తెగులు / కాటుక రోగం (False Smut)",
+      "cause": "ఉస్టిలాజినోయిడియా విరెన్స్ అనే ఫంగస్. అధిక తేమ, ఎక్కువ నత్రజని వాడకం వల్ల ఇది పెరుగుతుంది.",
+      "precautions": "ఆలస్యంగా నాట్లు వేయడం నివారించండి. పూత దశలో ఎక్కువ నత్రజని వేయకండి.",
+      "fertilizers": "వెన్ను తీసే దశలో నత్రజని ఎరువులు వేయడం తగ్గించండి.",
+      "pesticides": "కాపర్ ఆక్సీక్లోరైడ్ 50 WP (2.5గ్రా/లీటరు) లేదా ప్రొపికొనజోల్ 25 EC (1మి.లీ/లీటరు) పొట్ట దశలో పిచికారీ చేయండి.",
+      "organic": "నాటడానికి ముందు విత్తనాలను వేడి నీటిలో శుద్ధి చేయండి."
+    }
+  },
+  "Stem Rot": {
+    "en": {
+      "disease_display": "Stem Rot",
+      "cause": "Sclerotium oryzae fungus.",
+      "precautions": "Drain the field to allow the soil to dry periodically, burn stubble after harvest.",
+      "fertilizers": "Avoid excess Nitrogen. Apply Potash to strengthen the stem.",
+      "pesticides": "Thiophanate-methyl 70% WP (1g/liter) or Validamycin 3% L (2ml/liter).",
+      "organic": "Trichoderma viride soil application (2kg/acre mixed with FYM)."
+    },
+    "te": {
+      "disease_display": "కాండం కుళ్ళు తెగులు (Stem Rot)",
+      "cause": "స్క్లెరోటియం ఒరైజే అనే శిలీంధ్రం.",
+      "precautions": "అప్పుడప్పుడు పొలంలో నీటిని తీసివేసి నేల ఆరేలా చూడండి, కోత తర్వాత వరి కొయ్యలను కాల్చివేయండి.",
+      "fertilizers": "అధిక నత్రజని వాడకండి. కాండం బలానికి పొటాష్ ఎరువులు వాడండి.",
+      "pesticides": "థయోఫానేట్-మిథైల్ 70% WP (1గ్రా/లీటరు) లేదా వాలిడామైసిన్ 3% L (2మి.లీ/లీటరు) పిచికారీ చేయండి.",
+      "organic": "ట్రైకోడెర్మా విరిడే (ఎకరానికి 2కిలోలు పశువుల ఎరువులో కలిపి) నేలలో చల్లండి."
+    }
+  },
+  "Bakanae Disease": {
+    "en": {
+      "disease_display": "Bakanae Disease",
+      "cause": "Fusarium fujikuroi fungus (Seed-borne disease causing abnormal elongation).",
+      "precautions": "Use certified disease-free seeds and remove infected/abnormally tall seedlings.",
+      "fertilizers": "Maintain balanced nutrition. Avoid spreading infected soil.",
+      "pesticides": "Seed treatment with Carbendazim 50% WP (2g/kg of seed) before sowing.",
+      "organic": "Seed treatment with Pseudomonas fluorescens (10g/kg of seed)."
+    },
+    "te": {
+      "disease_display": "బకానీ వ్యాధి / పిచ్చి నారు (Bakanae Disease)",
+      "cause": "ఫ్యుసేరియం ఫ్యూజిక్యురోయ్ అనే ఫంగస్. ఇది విత్తనం ద్వారా వస్తుంది, మొక్కలు విపరీతంగా పొడవుగా పెరుగుతాయి.",
+      "precautions": "ఆరోగ్యకరమైన ధృవీకరించబడిన విత్తనాలను వాడండి, విపరీతంగా పెరిగిన మొక్కలను పీకి నాశనం చేయండి.",
+      "fertilizers": "సమతుల్య పోషణ అందించండి. వ్యాధి ఉన్న నేలను ఇతర పొలాలకు వ్యాపించకుండా చూడండి.",
+      "pesticides": "విత్తడానికి ముందు కార్బెండజిమ్ 50% WP (కిలో విత్తనానికి 2గ్రా) తో విత్తన శుద్ధి చేయండి.",
+      "organic": "సూడోమొనాస్ ఫ్లోరోసెన్స్ (కిలో విత్తనానికి 10గ్రా) తో విత్తన శుద్ధి చేయండి."
+    }
+  },
+  "Narrow Brown Leaf Spot": {
+    "en": {
+      "disease_display": "Narrow Brown Leaf Spot",
+      "cause": "Cercospora janseana fungus. Common in potassium-deficient soils.",
+      "precautions": "Use resistant varieties, manage crop residue, and harvest at the right time.",
+      "fertilizers": "Ensure adequate Potassium (K) fertilizer is applied.",
+      "pesticides": "Propiconazole 25% EC (200ml/acre) at the onset of disease.",
+      "organic": "Maintain overall plant health with organic composts rich in Potassium."
+    },
+    "te": {
+      "disease_display": "నారో బ్రౌన్ లీఫ్ స్పాట్ (Narrow Brown Leaf Spot)",
+      "cause": "సెర్కోస్పోరా జాన్సియానా అనే శిలీంధ్రం. పొటాషియం లోపం ఉన్న నేలల్లో ఇది సాధారణం.",
+      "precautions": "వ్యాధి నిరోధక రకాలను వాడండి, పంట అవశేషాలను నాశనం చేయండి, సరైన సమయానికి కోత కోయండి.",
+      "fertilizers": "పొటాషియం (K) ఎరువులు తగినంత వాడేలా చూసుకోండి.",
+      "pesticides": "వ్యాధి ప్రారంభంలో ప్రొపికొనజోల్ 25% EC (ఎకరానికి 200మి.లీ) పిచికారీ చేయండి.",
+      "organic": "పొటాషియం ఎక్కువగా ఉండే సేంద్రియ ఎరువులు వాడి మొక్కల ఆరోగ్యాన్ని కాపాడండి."
+    }
+  },
+  "Khaira Disease": {
+    "en": {
+      "disease_display": "Khaira Disease (Zinc Deficiency)",
+      "cause": "Nutritional deficiency, specifically lack of Zinc in the soil.",
+      "precautions": "Identify symptoms early (rusty brown spots on leaves), maintain proper soil pH.",
+      "fertilizers": "Apply Zinc Sulphate (ZnSO4) at 10-20 kg/acre to the soil during land preparation.",
+      "pesticides": "Foliar spray of Zinc Sulphate (0.5%) + Slaked Lime (0.25%) if symptoms appear.",
+      "organic": "Apply well-decomposed Farmyard Manure (FYM) to improve micro-nutrient availability."
+    },
+    "te": {
+      "disease_display": "జింక్ లోపం / ఖైరా వ్యాధి (Khaira Disease)",
+      "cause": "నేలలో జింక్ (Zn) పోషక లోపం వల్ల వస్తుంది.",
+      "precautions": "లక్షణాలను (ఆకులపై తుప్పు రంగు మచ్చలు) ముందుగానే గుర్తించండి, నేల pH సరిగ్గా ఉంచండి.",
+      "fertilizers": "పొలం దున్నే సమయంలో ఎకరానికి 10-20 కిలోల జింక్ సల్ఫేట్ (ZnSO4) వేయండి.",
+      "pesticides": "లక్షణాలు కనిపిస్తే 0.5% జింక్ సల్ఫేట్ + 0.25% సున్నం ద్రావణాన్ని పిచికారీ చేయండి.",
+      "organic": "సూక్ష్మ పోషకాల లభ్యతను పెంచడానికి బాగా కుళ్ళిన పశువుల ఎరువు (FYM) వాడండి."
+    }
+  },
+  "Grassy Stunt Virus": {
+    "en": {
+      "disease_display": "Grassy Stunt Virus",
+      "cause": "Rice Grassy Stunt Virus (RGSV) transmitted by the Brown Planthopper (BPH).",
+      "precautions": "Plough under infected stubble, monitor and control the Brown Planthopper vector.",
+      "fertilizers": "Avoid over-application of Nitrogen which attracts hoppers.",
+      "pesticides": "Use insecticides like Pymetrozine 50% WG (120g/acre) or Dinotefuran 20% SG (60g/acre) to control hoppers.",
+      "organic": "Use Neem Seed Kernel Extract (NSKE 5%) or set up light traps for hoppers."
+    },
+    "te": {
+      "disease_display": "గ్రాసీ స్టంట్ వైరస్ (Grassy Stunt Virus)",
+      "cause": "రైస్ గ్రాసీ స్టంట్ వైరస్. ఇది సుడిదోమ (Brown Planthopper) ద్వారా వ్యాపిస్తుంది.",
+      "precautions": "వ్యాధి సోకిన పంట అవశేషాలను దున్నివేయండి, సుడిదోమలను గమనించి నివారించండి.",
+      "fertilizers": "దోమలను ఆకర్షించే అధిక నత్రజని వాడకాన్ని నివారించండి.",
+      "pesticides": "దోమల నివారణకు పైమెట్రోజైన్ 50% WG (120గ్రా/ఎకరం) లేదా డైనోటెఫ్యూరాన్ 20% SG (60గ్రా/ఎకరం) వాడండి.",
+      "organic": "5% వేప గింజ కషాయం (NSKE) వాడండి లేదా దోమల కోసం దీపపు బుట్టలు (Light Traps) ఏర్పాటు చేయండి."
+    }
+  },
+  "Ragged Stunt Virus": {
+    "en": {
+      "disease_display": "Ragged Stunt Virus",
+      "cause": "Rice Ragged Stunt Virus (RRSV) transmitted primarily by the Brown Planthopper.",
+      "precautions": "Similar to Grassy Stunt: destroy infected plants immediately and control the hopper population.",
+      "fertilizers": "Apply balanced nutrients. Nitrogen spikes can worsen hopper infestations.",
+      "pesticides": "Control vectors with Imidacloprid 17.8 SL or Pymetrozine.",
+      "organic": "Encourage natural enemies of hoppers (spiders, ladybugs) and use botanical extracts."
+    },
+    "te": {
+      "disease_display": "రాగ్గెడ్ స్టంట్ వైరస్ (Ragged Stunt Virus)",
+      "cause": "రైస్ రాగ్గెడ్ స్టంట్ వైరస్. ఇది కూడా ప్రధానంగా సుడిదోమ ద్వారా వ్యాపిస్తుంది.",
+      "precautions": "గ్రాసీ స్టంట్ మాదిరిగానే: వ్యాధి సోకిన మొక్కలను వెంటనే పీకేయండి, దోమల జనాభాను నియంత్రించండి.",
+      "fertilizers": "సమతుల్య పోషకాలు వేయండి. నత్రజని ఎక్కువగా వేస్తే దోమల ఉధృతి పెరుగుతుంది.",
+      "pesticides": "దోమలను నివారించడానికి ఇమిడాక్లోప్రిడ్ 17.8 SL లేదా పైమెట్రోజైన్ వాడండి.",
+      "organic": "దోమలను తినే సాలీళ్ళు, అక్షింతల పురుగులను కాపాడండి, వృక్ష సంబంధిత ద్రావణాలు వాడండి."
+    }
+  },
+  "Udbatta Disease": {
+    "en": {
+      "disease_display": "Udbatta Disease",
+      "cause": "Ephelis oryzae fungus (Seed-borne and soil-borne).",
+      "precautions": "Remove and burn infected panicles immediately, avoid using seeds from infected fields.",
+      "fertilizers": "No specific fertilizer interaction, maintain general crop health.",
+      "pesticides": "Seed treatment with Thiram or Captan (2g/kg) or hot water treatment.",
+      "organic": "Solarize seeds in summer and use Trichoderma viride."
+    },
+    "te": {
+      "disease_display": "ఉద్బత్తా తెగులు (Udbatta Disease)",
+      "cause": "ఎఫెలిస్ ఒరైజే అనే ఫంగస్. ఇది విత్తనం మరియు నేల ద్వారా వ్యాపిస్తుంది.",
+      "precautions": "వ్యాధి సోకిన వెన్నులను వెంటనే పీకి కాల్చివేయండి, వ్యాధి ఉన్న పొలం నుండి విత్తనాలను వాడకండి.",
+      "fertilizers": "దీనికి ప్రత్యేక ఎరువుల సంబంధం లేదు, పంట ఆరోగ్యాన్ని కాపాడుకోండి.",
+      "pesticides": "విత్తడానికి ముందు థైరామ్ లేదా క్యాప్టాన్ (కిలోకు 2గ్రా) తో విత్తన శుద్ధి చేయండి.",
+      "organic": "ఎండాకాలంలో విత్తనాలను ఎండబెట్టండి మరియు ట్రైకోడెర్మా విరిడే వాడండి."
+    }
   }
 }
