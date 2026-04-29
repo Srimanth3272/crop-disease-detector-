@@ -33,7 +33,11 @@ except ImportError:
     HAS_TF = False
 
 MODEL_PATH = "paddy_model.h5"
-CLASSES = ["Leaf Blast", "Brown Spot", "Bacterial Leaf Blight", "Tungro Virus", "Healthy Leaf"]
+CLASSES = [
+    "Leaf Blast", "Brown Spot", "Bacterial Leaf Blight", "Tungro Virus", "Healthy Leaf",
+    "Sheath Blight", "Sheath Rot", "False Smut", "Stem Rot", "Bakanae Disease",
+    "Narrow Brown Leaf Spot", "Khaira Disease", "Grassy Stunt Virus", "Ragged Stunt Virus", "Udbatta Disease"
+]
 
 def load_disease_info():
     try:
@@ -64,31 +68,42 @@ def get_severity(confidence):
 
 def is_paddy_leaf(image_path):
     """
-    Heuristic check to see if an image is a plant leaf.
+    Stricter heuristic check to see if an image is a plant leaf using HSV color space.
     Filters out non-plant images (documents, faces, objects) based on color distribution.
     """
     try:
         from PIL import Image
         import numpy as np
         
-        img = Image.open(image_path).convert('RGB')
+        img = Image.open(image_path).convert('HSV')
         img.thumbnail((150, 150)) # Speed up processing
         img_array = np.array(img)
         
-        R = img_array[:, :, 0].astype(int)
-        G = img_array[:, :, 1].astype(int)
-        B = img_array[:, :, 2].astype(int)
+        # In Pillow HSV: H is 0-255, S is 0-255, V is 0-255
+        H = img_array[:, :, 0]
+        S = img_array[:, :, 1]
+        V = img_array[:, :, 2]
         
-        # Plant pixels are usually greener or brownish/yellowish
-        green_mask = (G > R) & (G > B)
-        brown_yellow_mask = (R > B) & (G > B) & (R > 50)
-        
-        plant_mask = green_mask | brown_yellow_mask
-        plant_ratio = np.sum(plant_mask) / (img_array.shape[0] * img_array.shape[1])
-        
-        # If less than 10% of the image resembles plant colors, reject it
-        if plant_ratio < 0.10:
+        # 1. Reject if the image is mostly grayscale/white/black (low saturation)
+        mean_saturation = np.mean(S)
+        if mean_saturation < 40: # Documents like Aadhaar have very low average saturation
             return False
+            
+        # 2. Count "Plant Colored" pixels (Green, Yellow, Brown) with decent saturation
+        # Green Hue in PIL (0-255): approx 40 to 120
+        # Yellow/Brown Hue: approx 10 to 40
+        # Saturation must be > 40 to avoid considering grey as colored
+        # Value must be > 30 to avoid black
+        
+        is_plant_color = ((H > 10) & (H < 130)) & (S > 40) & (V > 30)
+        
+        plant_ratio = np.sum(is_plant_color) / (img_array.shape[0] * img_array.shape[1])
+        
+        # A leaf close-up should have a significant amount of plant colors.
+        # Require at least 20% of the image to be distinctly plant-colored.
+        if plant_ratio < 0.20:
+            return False
+            
         return True
     except Exception as e:
         print(f"Validation error: {e}")
