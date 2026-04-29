@@ -158,7 +158,25 @@ def predict_image(image_path, lang='en'):
             model_gemini = genai.GenerativeModel('gemini-1.5-flash')
             img_for_gemini = Image.open(image_path)
             
-            prompt = f"You are an expert agricultural AI. Carefully analyze this image of a paddy leaf. Identify the specific disease from this exact list: {', '.join(CLASSES)}. You MUST reply with exactly one disease name from the list and absolutely no other text. If you cannot identify it, reply with 'Healthy Leaf'."
+            prompt = f"""You are a world-class agricultural pathologist. Your task is to identify the EXACT paddy (rice) disease in the provided image.
+Analyze the image carefully against these strict visual symptoms:
+- 'Leaf Blast': Spindle-shaped or diamond-shaped lesions with grey centers and brown margins on leaves.
+- 'Brown Spot': Small, circular/oval brown to dark-brown spots scattered like pepper on leaves.
+- 'Bacterial Leaf Blight': Yellowish to white water-soaked stripes along leaf edges/margins, often starting from the tip.
+- 'Tungro Virus': Yellow-orange discoloration of leaves starting from the tip, severe stunting.
+- 'Sheath Blight': Large, oval, greyish-white lesions with distinct dark brown margins on the lower leaf sheaths near water level.
+- 'Sheath Rot': Irregular brown/grey lesions on the uppermost leaf sheath enclosing the panicle.
+- 'False Smut': Large, velvety, orange/green/black spore balls replacing grains.
+- 'Stem Rot': Small black lesions on the outer leaf sheath near the water line, rotting stem.
+- 'Bakanae Disease': Abnormal elongation, pale green/yellowish leaves, abnormally tall tillers.
+- 'Narrow Brown Leaf Spot': Short, linear, narrow brown streaks parallel to leaf veins.
+- 'Khaira Disease': Rusty brown spots on leaves, starting from the middle (Zinc deficiency).
+- 'Grassy Stunt Virus': Excessive tillering, severe stunting, narrow stiff leaves.
+- 'Ragged Stunt Virus': Stunted growth, twisted/ragged leaves, vein swelling.
+- 'Udbatta Disease': Panicle emerges as a straight, rigid, whitish cylindrical spike.
+- 'Healthy Leaf': Green, vibrant, no lesions, no discoloration.
+
+Based on the image, output ONLY the exact name of the disease from the list above. Do not output any explanation. Output exactly one name."""
             
             response = model_gemini.generate_content([img_for_gemini, prompt])
             prediction_text = response.text.strip()
