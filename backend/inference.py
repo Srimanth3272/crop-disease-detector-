@@ -62,11 +62,63 @@ def get_severity(confidence):
     else:
         return "Low"
 
+def is_paddy_leaf(image_path):
+    """
+    Heuristic check to see if an image is a plant leaf.
+    Filters out non-plant images (documents, faces, objects) based on color distribution.
+    """
+    try:
+        from PIL import Image
+        import numpy as np
+        
+        img = Image.open(image_path).convert('RGB')
+        img.thumbnail((150, 150)) # Speed up processing
+        img_array = np.array(img)
+        
+        R = img_array[:, :, 0].astype(int)
+        G = img_array[:, :, 1].astype(int)
+        B = img_array[:, :, 2].astype(int)
+        
+        # Plant pixels are usually greener or brownish/yellowish
+        green_mask = (G > R) & (G > B)
+        brown_yellow_mask = (R > B) & (G > B) & (R > 50)
+        
+        plant_mask = green_mask | brown_yellow_mask
+        plant_ratio = np.sum(plant_mask) / (img_array.shape[0] * img_array.shape[1])
+        
+        # If less than 10% of the image resembles plant colors, reject it
+        if plant_ratio < 0.10:
+            return False
+        return True
+    except Exception as e:
+        print(f"Validation error: {e}")
+        return True # Fallback to True if processing fails
+
 def predict_image(image_path, lang='en'):
     """
     Predicts the disease for the given image path.
     Uses the trained model if available, otherwise uses a mock prediction for testing UI.
     """
+    # First, validate if the image is actually a leaf
+    if not is_paddy_leaf(image_path):
+        error_msg = "The uploaded image does not appear to be a plant leaf."
+        prec_msg = "Please upload a clear image of a paddy leaf to get accurate disease predictions."
+        
+        if lang == 'te':
+            error_msg = "అప్‌లోడ్ చేసిన చిత్రం మొక్క ఆకులా కనిపించడం లేదు. (Aadhaar/Documents not allowed)"
+            prec_msg = "ఖచ్చితమైన అంచనాల కోసం దయచేసి వరి ఆకు యొక్క స్పష్టమైన చిత్రాన్ని అప్‌లోడ్ చేయండి."
+            
+        return {
+            "disease": "Invalid Image / చెల్లని చిత్రం" if lang == 'te' else "Invalid Image",
+            "confidence": 0.0,
+            "severity": "None",
+            "cause": error_msg,
+            "precautions": prec_msg,
+            "fertilizers": "-",
+            "pesticides": "-",
+            "organic": "-"
+        }
+        
     # Load info
     
     if model is not None:
