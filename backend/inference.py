@@ -2,8 +2,28 @@ import os
 import random
 import time
 import json
+from dotenv import load_dotenv
+
+load_dotenv() # Load environment variables from .env
+
+try:
+    from pymongo import MongoClient
+    MONGO_URI = os.getenv("MONGO_URI")
+    if MONGO_URI:
+        mongo_client = MongoClient(MONGO_URI)
+        db = mongo_client["smart_paddy"]
+        disease_collection = db["diseases"]
+        USE_MONGO = True
+        print("Connected to MongoDB Cloud!")
+    else:
+        USE_MONGO = False
+        print("No MONGO_URI found, will fall back to local JSON.")
+except ImportError:
+    USE_MONGO = False
+    print("pymongo not installed, falling back to local JSON.")
 
 # Try importing tensorflow, but provide a mock fallback if not installed/configured properly
+
 try:
     import tensorflow as tf
     import numpy as np
@@ -72,8 +92,19 @@ def predict_image(image_path, lang='en'):
         disease_name = random.choice(CLASSES)
         confidence = round(random.uniform(0.70, 0.98), 2)
         
-    # Fetch translation wrapper gracefully; fallback to 'en' if 'te' is missing or unspecified 
-    db_entry = DISEASE_DB.get(disease_name, {})
+    # Fetch from MongoDB if available, otherwise fallback to local JSON DB
+    db_entry = {}
+    if USE_MONGO:
+        try:
+            mongo_doc = disease_collection.find_one({"disease_id": disease_name})
+            if mongo_doc:
+                db_entry = mongo_doc
+        except Exception as e:
+            print(f"MongoDB Error: {e}")
+            db_entry = DISEASE_DB.get(disease_name, {})
+    else:
+        db_entry = DISEASE_DB.get(disease_name, {})
+        
     info = db_entry.get(lang, db_entry.get('en', {}))
     
     severity = get_severity(confidence) if disease_name != "Healthy Leaf" else "None"
