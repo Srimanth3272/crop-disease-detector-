@@ -1,7 +1,6 @@
 flask
 flask-cors
 Pillow
-tensorflow
 numpy
 pymongo
 python-dotenv
