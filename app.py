@@ -11,9 +11,14 @@ from backend.inference import predict_image
 app = Flask(__name__)
 CORS(app)
 
-# Use a local uploads folder instead of tempfile to avoid Windows permission errors
-app.config['UPLOAD_FOLDER'] = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'uploads')
-os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
+import tempfile
+
+# Vercel has a read-only file system, so we must use /tmp for uploads
+if os.environ.get("VERCEL") == "1":
+    app.config['UPLOAD_FOLDER'] = tempfile.gettempdir()
+else:
+    app.config['UPLOAD_FOLDER'] = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'uploads')
+    os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
 app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024 # 16 MB max
 
 @app.route('/')
