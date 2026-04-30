@@ -159,27 +159,31 @@ def predict_image(image_path, lang='en'):
             img_for_gemini = Image.open(image_path)
             
             prompt = """You are a world-class agricultural pathologist. Your task is to identify the EXACT paddy (rice) disease in the provided image.
-Analyze the image carefully against these strict visual symptoms:
-- 'Leaf Blast': Spindle-shaped or diamond-shaped lesions with grey centers and brown margins on leaves.
-- 'Brown Spot': Small, circular/oval brown to dark-brown spots scattered like pepper on leaves.
-- 'Bacterial Leaf Blight': Yellowish to white water-soaked stripes along leaf edges/margins, often starting from the tip.
-- 'Tungro Virus': Yellow-orange discoloration of leaves starting from the tip, severe stunting.
-- 'Sheath Blight': Large, oval, greyish-white lesions with distinct dark brown margins on the lower leaf sheaths near water level.
-- 'Sheath Rot': Irregular brown/grey lesions on the uppermost leaf sheath enclosing the panicle.
-- 'False Smut': Large, velvety, orange/green/black spore balls replacing grains.
-- 'Stem Rot': Small black lesions on the outer leaf sheath near the water line, rotting stem.
-- 'Bakanae Disease': Abnormal elongation, pale green/yellowish leaves, abnormally tall tillers.
-- 'Narrow Brown Leaf Spot': Short, linear, narrow brown streaks parallel to leaf veins.
-- 'Khaira Disease': Rusty brown spots on leaves, starting from the middle (Zinc deficiency).
-- 'Grassy Stunt Virus': Excessive tillering, severe stunting, narrow stiff leaves.
-- 'Ragged Stunt Virus': Stunted growth, twisted/ragged leaves, vein swelling.
-- 'Udbatta Disease': Panicle emerges as a straight, rigid, whitish cylindrical spike.
-- 'Healthy Leaf': Green, vibrant, no lesions, no discoloration.
 
-First, analyze the visual symptoms in detail.
+The allowed disease categories are:
+- 'Leaf Blast'
+- 'Brown Spot'
+- 'Bacterial Leaf Blight'
+- 'Tungro Virus'
+- 'Sheath Blight'
+- 'Sheath Rot'
+- 'False Smut'
+- 'Stem Rot'
+- 'Bakanae Disease'
+- 'Narrow Brown Leaf Spot'
+- 'Khaira Disease'
+- 'Grassy Stunt Virus'
+- 'Ragged Stunt Virus'
+- 'Udbatta Disease'
+- 'Healthy Leaf'
+
+IMPORTANT INSTRUCTION: 
+Do not restrict yourself to simple textual definitions. Instead, use your extensive pre-trained visual knowledge of agricultural pathology. Visually match this image against standard, real-world examples of these diseases as they typically appear in Google Image searches and established agricultural datasets.
+
+First, analyze the visual symptoms in detail, comparing them with your internal visual knowledge of typical presentations of these paddy diseases.
 Then, output your response STRICTLY as a valid JSON object matching this schema:
 {
-  "reasoning": "Brief analysis of the symptoms seen in the image",
+  "reasoning": "Brief analysis comparing the symptoms seen to typical real-world/Google Image presentations of the disease",
   "disease": "Exact name of the disease from the list above"
 }"""
             
